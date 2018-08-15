@@ -1,0 +1,18 @@
+{
+  "name": "browser-to-leds",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "heunetik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "path" : "^0.12.7",
+    "max7219-matrix" : "^0.0.2"
+  }
+}

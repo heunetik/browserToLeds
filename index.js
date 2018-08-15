@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+const ledWriter = require("./routes/writeToLeds");
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.listen(port, function() {
@@ -18,7 +20,4 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 
-app.post('/formData', (req, res) => {
-    console.log(req.body.text);
-    res.end(200);
-});
+app.post('/formData', ledWriter);
